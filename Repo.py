@@ -31,5 +31,3 @@ class Repo:
             df = pd.DataFrame(datas)
             df.to_csv(self.default_csv, encoding='gbk')
 
-    def over(self):
-        self.file.close()

@@ -22,7 +22,6 @@ def init_papers():
     parser.parse(filename)
     print('Parser Complete!')
     inner.format()
-    inner.over()
 
 
 if __name__ == '__main__':
