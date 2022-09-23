@@ -5,3 +5,5 @@ ret
 dblp.xml
 testProc.py
 view.py
+*.csv   
+*.repo   

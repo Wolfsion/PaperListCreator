@@ -12,6 +12,17 @@ def finds(url: str) -> bool:
     return False
 
 
+def keyword_match(title: str, and_match: bool = True) -> bool:
+    lower_text = title.lower()
+    def func1(word, text): return text.find(word) == -1
+    def func2(word, text): return text.find(word) >= 0
+    check_func = func1 if and_match else func2
+    for keyword in keywords:
+        if check_func(keyword, lower_text):
+            return not and_match
+    return and_match
+
+
 class MHandler(xml.sax.ContentHandler):
     def __init__(self, io: Repo):
         self.curt_tag = None
@@ -81,7 +92,7 @@ class MHandler(xml.sax.ContentHandler):
             url = self.kv['url'] if 'url' in self.kv.keys() else 'NULL'
             # sub_text = self.kv['sub_detail'] if 'sub_detail' in self.kv.keys() else 'NULL'
 
-            if finds(url) and year in years and title.find(keyword) >= 0:
+            if finds(url) and year in years and keyword_match(title):
                 param = (str(tid), title, author, year, url)
                 self.params.append(param)
 

@@ -9,4 +9,5 @@ url_text = ('/icml/', '/aaai/', '/nips/', '/ijcai/', '/iclr/',
 conf = ('ICML', 'AAAI', 'NeurIPS', 'IJCAI', 'ICLR', 'UAI', 'CVPR', 'ECCV')
 journal = ('TKDE', 'TPAMI')
 
-keyword = 'Compress'
+# keywords = ['pruning', 'federated']
+keywords = ['federated']

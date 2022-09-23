@@ -2,7 +2,7 @@
 
 ## 使用
 
-1. 将下载好的dblp.xml置于项目根目录中
+1. 将下载好的dblp.xml(https://dblp.uni-trier.de/xml/) 置于项目根目录中
 2. 设置setting.py文件中的内容，运行main.py得到papers.csv
 
 ```
