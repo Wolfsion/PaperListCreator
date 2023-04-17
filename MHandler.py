@@ -14,9 +14,11 @@ def finds(url: str) -> bool:
 
 def keyword_match(title: str, and_match: bool = True) -> bool:
     lower_text = title.lower()
+
     def func1(word, text): return text.find(word) == -1
     def func2(word, text): return text.find(word) >= 0
     check_func = func1 if and_match else func2
+
     for keyword in keywords:
         if check_func(keyword, lower_text):
             return not and_match

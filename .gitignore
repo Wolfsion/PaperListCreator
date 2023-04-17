@@ -3,7 +3,9 @@ __pycache__
 venv
 ret
 dblp.xml
+dblp.xml.gz
 testProc.py
 view.py
 *.csv   
-*.repo   
+*.repo
+
